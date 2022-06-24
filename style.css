@@ -1,11 +1,11 @@
 body{
     background-color: rgb(160, 87, 14);
-   
 }
 section{
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
+height: min-content;
     background-color: aqua;
 }
 .de{
@@ -13,7 +13,7 @@ section{
     border:solid black 5px;
     width: 70px;
     height: 70px;
-    
+
 }
 .btn:hover{
     background-color: blue;
