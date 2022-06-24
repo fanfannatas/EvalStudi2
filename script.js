@@ -22,7 +22,8 @@ function rollTheDice() {
 
         document.querySelector(".img2").setAttribute("src",
             "dice" + randomNumber2 + ".png");
-
+        var somme = randomNumber1 + randomNumber2;
+document.querySelector("span")
     }),
 }
 //ajouter au total avec hold
