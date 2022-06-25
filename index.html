@@ -11,24 +11,27 @@
 <body>
 <section>
     <div>
-        <button class="btn btn-outline-dark d-grid gap-2 col-6 mx-auto">new game</button>
-    </div><br>
+        <button class="btn btn-outline-dark d-grid gap-2 col-6 mx-auto" onClick="editNames()">entrez vos noms</button>
+        <button class="btn btn-outline-dark d-grid gap-2 col-6 mx-auto" onClick="startgame()">commencer la partie!</button>
+    </div>
+    </div>
+    <br>
     <div class="row">
         <div class="col-sm-6">
         <div class="card">
             <div class="card-body_one">
-            <h5 class="card-title">Player One</h5>
-            <p class="card-text">score $variable</p>
-            <a href="#" class="btn btn-primary">roll dice</a>
+                <h5 class="card-title"><p class="Player1">Player one</p></h5>
+                <p class="score p1">current score</p>
+            <a href="#" class="btn btn-primary" onClick="rollTheDice()">roll dice</a>
             </div>
         </div>
     </div>
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body_two">
-            <h5 class="card-title">Player Two</h5>
-            <p class="card-text">score $variable</p>
-            <a href="#" class="btn btn-primary">hold</a>
+            <h5 class="card-title"><p class="Player2">Player Two</p></h5>
+            <p class="score p2">{$scoreP2}</p>
+            <a href="#" class="btn btn-primary" onClick=" ajoutTotal()">hold</a>
             </div>
         </div>
     </div>
@@ -36,15 +39,17 @@
 <nav>
     <div class="container-fluid">
         <div class="bl">
-        <span>score total player one</span>
+        <span class="p1">score total player one</span>
         </div>    
         <div class="br">
-        <span>score total player two</span>
+        <span class="p2">score total player two</span>
         </div>
         </div>
 </nav>  
     <div class="container-fluid">
-        <div class="de d-grid gap-2 col-6 mx-auto">resultat du de</div>
+      
+        <div class="de d-grid gap-2 col-6 mx-auto">  <img class="img1" src="dice6.png">
+        <img class="img2" src="dice6.png"></div>
     </div> 
 </section>
 <script type="text/javascript" src="script.js"></script>

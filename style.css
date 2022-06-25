@@ -11,8 +11,9 @@ height: min-content;
 .de{
     margin-top: 50px;
     border:solid black 5px;
-    width: 70px;
-    height: 70px;
+    width: 125px;
+    height: 250px;
+
 
 }
 .btn:hover{
