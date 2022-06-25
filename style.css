@@ -1,45 +1,168 @@
-body{
-    background-color: rgb(160, 87, 14);
+/*  reset du navigateur*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
 }
-section{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-height: min-content;
-    background-color: aqua;
-}
-.de{
-    margin-top: 50px;
-    border:solid black 5px;
-    width: 125px;
-    height: 250px;
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
+body {
+    font: kristen;
+    position: relative;
+    height: 100vh;
+    color: rgb(242, 25, 144);
+    text-decoration: underline;
+    text-align: center;
+    background-color: #222;
 }
-.btn:hover{
-    background-color: blue;
+
+/* Wrapper */
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(164, 148, 66);
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
-nav{
-    
-    justify-content: space-between;
-}
-.bl{
-    width: 200px;
-    display: inline;
+
+/* Panels */
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
     float: left;
-    border: 5px red solid;
+    height: 600px;
+    padding: 100px;
 }
-.br{
-    
-    width: 200px;
-    display: inline;
-    float: inline-end;
-    border: 5px violet solid;
-}
-.card-body_one{
-    border: 5px red solid;
-}
-.card-body_two{
-    border: 5px violet solid;
 
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
 }
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #d0f031; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    color:#d0f031
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+/* Buttons */
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { 
+    font-weight: 600;
+    background-color: aqua;
+    border-radius: 70%;
+ }
+button:hover i { 
+    margin-right: 20px;
+    background-color: aqua;
+    border-radius: 70%;
+ }
+
+button:focus {
+    outline: none;
+}
+
+
+/* position  des bouton au centre un en dessus de l autre */
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+/*  images */
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+/*position img*/
+#dice1 { top: 120px; }
+#dice2 { top: 250px; }
+
+/* Winner status */ 
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #e331a5; }
+
+/* Winning score input */
+#winningScore {
+    position: absolute;
+    top: 520px;
+    left: 50%;
+    text-transform: uppercase; 
+    color: #555;
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    transform: translateX(-50%);
+}
+
+#winningScore:focus { outline: none; }
